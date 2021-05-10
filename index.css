@@ -1,0 +1,498 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: cambria;
+}
+.homePage, .contactPage, .aboutPage, .blogPage, .activityPage, .footerPage{
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.homePage{
+	min-height: 400px;
+}
+.aboutPage{
+	top: 20vh;
+}
+.contactPage{
+	top: 20vh;
+}
+.blogPage{
+	top: 20vh;
+}
+.activityPage{
+	top: 20vh;
+}
+.footerPage{
+	top: 20vh;
+}
+
+.header{
+	width: 100%;
+	max-height: 20vh;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	box-sizing: border-box;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+
+}
+.header img{
+	width: 50px;
+	box-sizing: border-box;
+	float: left;
+}
+nav {
+	float: right;
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+nav ul li
+{
+	list-style: none;
+}
+nav ul li a{
+	display: block;
+	margin: 10px 0;
+	padding:  10px 20px;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+
+  	
+}
+
+nav ul li a:hover, nav ul li a.active {
+border-bottom: 5px solid red;
+font-weight: bold;
+padding-bottom: 2px;
+transition: 0.5s;
+}
+@media (max-width: 1200px)
+{
+	header
+	{
+		margin: 20px;
+	}
+}
+@media(max-width: 700px){
+	.toggle{
+		display: block;
+		width: 40px;
+		height: 40px;
+		float: right;
+		background: black;
+		cursor: pointer;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	.toggle:before
+	{
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 40px;
+
+	}
+	nav
+	{
+		display: none;
+	}
+		.toggle.active:before
+	{
+		content: '\f00d';
+		font-family: fontAwesome;
+		line-height: 40px;
+
+	}
+	
+	nav.active{
+		display: block;
+		width: 100%;
+	}
+	nav.active ul{
+		display: block;
+		background: black;
+	}
+	nav.active ul li{
+		margin: 0;
+	}
+	nav.active ul li a{
+	margin: 0;
+	}
+}
+.slideshow-container{
+	position: relative;
+	top: 15vh;
+
+	
+}
+.slideshow-container .text-image{
+	position: absolute;
+	bottom: 10%;
+	font-size: 40px;
+	left: 30%;
+	color: #f1f1f1;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 115px;
+  transition: background-color 0.6s ease;
+  
+}
+/*Customizing The About Page*/
+.aboutPage{
+	padding-bottom: 50px;
+	padding-top: 50px;
+
+}
+#myText{
+	padding: 20px;
+	text-align: center;
+}
+#myText h1{
+	text-align: center;
+	color: black !important;
+	padding-bottom: 10px;
+}
+#myText h1::after{
+	content: '';
+	background: red;
+	display: block;
+	height: 3px;
+	width: 170px;
+	margin: 20px auto 5px;
+}
+#myText ul li{
+	text-align: left;
+	padding: 5px;
+	margin-left: 150px;
+}
+#myText h3{
+	color: red;
+	font-weight: bold;
+}
+#myText #enSavoir{
+	position: relative;
+	top: 40px;	
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+	border: 2px solid #000;
+	
+}
+#myText #enSavoir:hover{
+	background: red;
+	color: #fff;
+	border: none;
+}
+
+/*Customizing the Activities*/
+.activityPage{
+	padding-top: 100px;
+	min-height: 400px;
+}
+#discovery{
+	text-align: center;
+	font-size: 30px;
+
+}
+.container2{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.gallery img{
+	top: 20%;
+	left: 15%;
+	box-sizing: border-box;
+	width: 300px;
+	height: 350px;
+	margin: 0;
+	padding: 10px; 
+	display: flex;
+	transition: all 0.8s;
+}
+.gallery .text-block
+{
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 50%;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+
+.gallery img:hover{
+	transform: scale(1.1);
+	
+}
+
+
+
+
+/*Customizing Contact Page*/
+.contactPage{
+	min-height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('Images/9.jpg');
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	color: #f1f1f1;
+}
+
+.myForm{
+	display: block;
+	border: 1px solid red;
+	width: 500px;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+	left: 33vw;
+	line-height: 30px;
+	background: rgba(255,255,255,.2);
+	box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.myForm span .myInput{
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+.myForm .textblock span{
+	font-size: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	color: #f1f1f1;
+}
+
+input{
+	border: 0;
+	border-radius: 5px;
+  	padding: 20px;
+  	margin: 10px;
+  	background-color: #f0f0f0;
+}
+textarea{
+	border: 0;
+	border-radius: 5px;
+	width: 25vw;
+ 	height: 80px;
+  	padding: 20px;
+  	margin: 10px;
+  	background-color: #f0f0f0;
+}
+input[type ="submit"]{
+	background-color: red;
+	color: white;
+	position: relative;
+	font-size: 20px;
+}
+
+input[type ="submit"]:hover{
+	background-color: white;
+	color: red;
+}
+.icons{
+	position: relative;
+	text-align: center;
+
+}
+.icons i{
+	text-align: center;
+	font-size: 50px;
+	display: inline-grid;
+	padding: 20px;
+	transition: 0.5s;
+}
+.icons i:hover{
+	transform: translateY(-20px) scale(.5);
+}
+.icons span{
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.icons ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 20px;
+	font-size: 15px;
+	position: relative;
+	bottom: 5vh;
+	text-align: center;
+	margin-left: 5vw;
+}
+/*Customizing the Blog*/
+.blogPage{
+	min-height: 600px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+.content{
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 50px;
+	overflow: hidden;
+}
+.blog1{
+	position: relative;
+	width: 20vw;
+	height: 80vh;
+	padding: 20px;
+	overflow: hidden;
+	
+}
+.blog1 img{
+	width: 100%;
+	height: 50%;
+	transition: all 0.8s;
+}
+.blog1 img:hover{
+	transform: scale(1.1);
+}
+.blog1 span{
+	background: rgba(0,0,0,.2);
+	color: white;
+	position: absolute;
+	bottom: 50%;
+}
+.det a{
+	text-decoration: none;
+	color: black;
+	line-height: 40px;
+}
+.mycontainer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+/*Back to top */
+.btn-back {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 40px;
+  background-color: black;
+  opacity: 0.5;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.fa-angle-double-up {
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+  line-height: 10em;
+}
+
+.btn-back:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .btn-back {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+/*Customizing the footer*/
+.footerPage{
+	background: black;
+    color: #f1f1f1;
+    padding: 0;
+    margin: 0;
+    height: 20vh;
+    width: 100%;
+   
+}
+a .fab{
+	text-decoration: none;
+	padding: 20px;
+	color: white;
+}
+.fab{
+	font-size: 30px;
+
+}
+.copyright{
+	float: right;
+}
+
+/*==============================================================================
+[Resposiveness]
+==============================================================================*/
+@media(max-width: 700px){
+
+	.slideshow-container .text-image{
+	position: absolute;
+	bottom: 10%;
+	font-size: 40px;
+	left: 15%;
+	color: #f1f1f1;
+}
+
+	#myText ul li{
+	text-align: left;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+	.myForm{
+		position: relative;
+		left: 10px;
+		width: 350px;
+
+		}
+		.icons i{
+	text-align: center;
+	font-size: 30px;
+	display: grid;
+	padding: 10px;
+	transition: 0.5s;
+		}
+		.icons ul{
+		display: none;
+	}
+	.det a{
+	text-decoration: none;
+	color: black;
+	line-height: 10px;
+	}
+}
